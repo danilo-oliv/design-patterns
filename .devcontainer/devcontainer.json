@@ -1,0 +1,33 @@
+{
+  "name": "PHP + Java Dev Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu", 
+
+  "features": {
+    "ghcr.io/devcontainers/features/php:1": {
+      "version": "8.2"
+    },
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
+
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y unzip zip curl",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "felixfbecker.php-debug",
+        "bmewburn.vscode-intelephense-client",
+        "redhat.java",
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-java-test",
+        "vscjava.vscode-java-pack"
+      ]
+    }
+  },
+
+  "remoteUser": "vscode"
+}
